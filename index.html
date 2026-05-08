@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Purple Flowers</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- DECOR -->
+  <div class="floating-decor decor1">🌷</div>
+  <div class="floating-decor decor2">🧺</div>
+  <div class="floating-decor decor3">🍭</div>
+  <div class="floating-decor decor4">💜</div>
+
+  <!-- LOGIN -->
+  <section class="login-page" id="loginPage">
+    <div class="login-box">
+      <h1>Purple Flowers</h1>
+      <p>Login menggunakan Gmail untuk masuk 💜</p>
+
+      <input type="email" id="email" placeholder="Masukkan Gmail">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Masuk ke Toko</button>
+    </div>
+  </section>
+
+  <!-- WEBSITE -->
+  <div class="website" id="website">
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="logo">🌷 Purple Flowers</div>
+
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Flowers</a>
+        <a href="#">Bucket</a>
+        <a href="#">Checkout</a>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Dreamy Purple Flower Shop</h1>
+
+      <p>
+        Toko bunga aesthetic dreamy bernuansa kapas ungu pastel
+        dengan desain lucu, manis, dan elegant 🌷💜
+      </p>
+
+      <button onclick="scrollToProducts()">
+        Lihat Koleksi Bunga
+      </button>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="productsSection">
+
+      <h2 class="section-title">
+        🌸 Koleksi Fresh Flowers
+      </h2>
+
+      <div class="products" id="products"></div>
+
+    </section>
+
+    <!-- FLOATING CART -->
+    <div class="floating-cart">
+      <h2>🛒 Keranjang</h2>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <h3 id="totalPrice">Total: Rp 0</h3>
+
+      <br>
+
+      <button class="checkout-btn" onclick="checkoutWhatsApp()">
+        Checkout WhatsApp
+      </button>
+    </div>
+
+    <footer>
+      © 2026 Purple Flowers • Dreamy Purple Shop 💜
+      <br><br>
+      Pembayaran DANA:
+      <b>+62 856-0663-7038</b>
+    </footer>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
