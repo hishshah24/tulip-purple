@@ -1,0 +1,288 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Quicksand',sans-serif;
+}
+
+body{
+  background: linear-gradient(180deg,#f7edff,#fff5ef,#f4e9ff);
+  overflow-x:hidden;
+  color:#6d4b7c;
+}
+
+/* DECOR */
+.floating-decor{
+  position:fixed;
+  z-index:0;
+  opacity:0.3;
+  animation: float 6s ease-in-out infinite;
+  font-size:40px;
+}
+
+.decor1{top:50px;left:20px;}
+.decor2{top:200px;right:20px;}
+.decor3{bottom:80px;left:50px;}
+.decor4{bottom:150px;right:60px;}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* LOGIN */
+.login-page{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.login-box{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  width:350px;
+  border-radius:40px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(180,120,255,0.2);
+  border:3px solid #f4dfff;
+}
+
+.login-box h1{
+  color:#9d72ff;
+  margin-bottom:10px;
+  font-size:32px;
+}
+
+.login-box p{
+  margin-bottom:25px;
+  color:#8d77a9;
+}
+
+.login-box input{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:20px;
+  margin-bottom:15px;
+  background:#fff;
+  outline:none;
+}
+
+.login-box button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:20px;
+  background:#b39dff;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.login-box button:hover{
+  background:#9b7cff;
+}
+
+/* WEBSITE */
+.website{
+  display:none;
+}
+
+/* NAVBAR */
+nav{
+  width:100%;
+  padding:18px 40px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+  color:#a16eff;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#7b5b95;
+  font-weight:600;
+}
+
+.logout-btn{
+  background:#ffb6c1;
+  padding:10px 16px;
+  border:none;
+  border-radius:20px;
+  color:white;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  flex-direction:column;
+  padding:50px 20px;
+}
+
+.hero h1{
+  font-size:60px;
+  color:#a77cff;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:700px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.hero button{
+  background:#c8b6ff;
+  border:none;
+  padding:16px 30px;
+  border-radius:30px;
+  color:white;
+  cursor:pointer;
+}
+
+/* PRODUCTS */
+.products-section{
+  padding:50px 40px 120px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:40px;
+  color:#9f7cff;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.product-card{
+  background:rgba(255,255,255,0.75);
+  border-radius:40px;
+  padding:20px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 20px rgba(150,100,255,0.1);
+}
+
+.product-card::before{
+  content:"🍬";
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:25px;
+}
+
+.product-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:30px;
+  margin-bottom:15px;
+}
+
+.product-card h3{
+  margin-bottom:8px;
+  color:#8c66ff;
+}
+
+.price{
+  color:#ff91a4;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.product-card button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:20px;
+  background:#cbb8ff;
+  color:white;
+  cursor:pointer;
+}
+
+/* CART */
+.floating-cart{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:330px;
+  background:#8bc6ff;
+  border-radius:35px;
+  padding:20px;
+  color:white;
+}
+
+.cart-items{
+  max-height:180px;
+  overflow:auto;
+  margin-bottom:15px;
+}
+
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+
+.checkout-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:20px;
+  background:white;
+  color:#5f98ff;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#8c77a6;
+}
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .floating-cart{
+    width:90%;
+    right:5%;
+  }
+
+}
